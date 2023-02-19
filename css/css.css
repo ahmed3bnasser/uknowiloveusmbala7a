@@ -518,7 +518,7 @@ height: 160vh;
 .sup4{
     background-color: #a8a8a8b8;
     position: absolute;
-    left: 40%;
+    left: 50%;
     top: 90%;
     width: max-content;
     COLOR: hsla(0, 0%, 100%, 0.906);
@@ -634,7 +634,7 @@ height: 160vh;
     background-color: #413f3fba;
     position: absolute;
     left: 0%;
-    top: 92%;
+    top: 90%;
     width: max-content;
     COLOR: hsla(0, 58%, 58%, 0.906);
     border-radius: 10%;
