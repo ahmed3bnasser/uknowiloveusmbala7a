@@ -660,3 +660,12 @@ display: none;
 .textsup8:hover{
     display: flex;
 }
+
+.textd{
+    min-height: 100vh;
+    height: fit-content;
+}
+.textdAR{
+    min-height: 101vh;
+    height: fit-content;
+}
