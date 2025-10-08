@@ -3,140 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XDZBA Store</title>
+  <title>Bubbles | Items Dashboard</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
+
     body {
-      background: #f5f5f5;
-      color: #333;
-      padding: 20px;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    header h1 {
-      font-size: 2rem;
+      margin: 0;
+      background: linear-gradient(135deg, #a7c0ff, #d3f3ff);
       color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
     }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
-    .product {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: 0.3s;
+
+    header {
       width: 100%;
-      max-width: 270px;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
     }
-    .product:hover {
-      transform: translateY(-5px);
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #2563eb;
     }
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .info {
-      padding: 15px;
-      text-align: center;
-    }
-    .info h2 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-      color: #111;
-    }
-    .info p {
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-    }
-    .price {
-      font-weight: bold;
-      color: #009688;
-      font-size: 1rem;
-      margin-bottom: 12px;
-    }
-    .btn {
-      background: #009688;
+
+    .login-btn {
+      background: #2563eb;
       color: #fff;
       border: none;
-      border-radius: 8px;
-      padding: 10px 16px;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
       cursor: pointer;
       transition: 0.3s;
     }
-    .btn:hover {
-      background: #00796b;
+
+    .login-btn:hover {
+      background: #1d4ed8;
     }
+
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .item-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .item-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .item-content {
+      padding: 20px;
+    }
+
+    .item-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #111;
+    }
+
+    .item-content p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 8px 0 12px;
+    }
+
+    .item-content .price {
+      font-weight: 600;
+      color: #2563eb;
+    }
+
     footer {
-      text-align: center;
       margin-top: 40px;
-      color: #777;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>XDZBA Product Gallery</h1>
-    <p>Quick showcase of trending items</p>
+    <div class="logo">Bubbles Dashboard</div>
+    <button class="login-btn">Login with TikTok</button>
   </header>
 
-  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/300x200?text=Product+1" alt="Product 1" />
-      <div class="info">
-        <h2>Smart Watch</h2>
-        <p>Track your health and stay connected on the go.</p>
-        <div class="price">$49.99</div>
-        <button class="btn">Buy Now</button>
+  <section class="items-grid">
+    <div class="item-card">
+      <img src="https://picsum.photos/400/200?random=1" class="item-image" alt="Item 1" />
+      <div class="item-content">
+        <h3>TikTok Ad Campaign #1</h3>
+        <p>Reach: 24.5k views | Clicks: 1.2k</p>
+        <div class="price">$45 / day</div>
       </div>
     </div>
 
-    <div class="product">
-      <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" />
-      <div class="info">
-        <h2>Wireless Headphones</h2>
-        <p>High-quality sound and long-lasting comfort.</p>
-        <div class="price">$69.99</div>
-        <button class="btn">Buy Now</button>
+    <div class="item-card">
+      <img src="https://picsum.photos/400/200?random=2" class="item-image" alt="Item 2" />
+      <div class="item-content">
+        <h3>TikTok Ad Campaign #2</h3>
+        <p>Reach: 19.3k views | Clicks: 950</p>
+        <div class="price">$39 / day</div>
       </div>
     </div>
 
-    <div class="product">
-      <img src="https://via.placeholder.com/300x200?text=Product+3" alt="Product 3" />
-      <div class="info">
-        <h2>Bluetooth Speaker</h2>
-        <p>Compact design with powerful sound performance.</p>
-        <div class="price">$39.99</div>
-        <button class="btn">Buy Now</button>
+    <div class="item-card">
+      <img src="https://picsum.photos/400/200?random=3" class="item-image" alt="Item 3" />
+      <div class="item-content">
+        <h3>Product Promo Video</h3>
+        <p>Reach: 32k views | Engagement: 4.5%</p>
+        <div class="price">$52 / day</div>
       </div>
     </div>
 
-    <div class="product">
-      <img src="https://via.placeholder.com/300x200?text=Product+4" alt="Product 4" />
-      <div class="info">
-        <h2>Fitness Band</h2>
-        <p>Monitor your steps, sleep, and calories daily.</p>
-        <div class="price">$29.99</div>
-        <button class="btn">Buy Now</button>
+    <div class="item-card">
+      <img src="https://picsum.photos/400/200?random=4" class="item-image" alt="Item 4" />
+      <div class="item-content">
+        <h3>Influencer Collaboration</h3>
+        <p>Reach: 41k views | Likes: 6.2k</p>
+        <div class="price">$58 / day</div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 XDZBA Store — All rights reserved.</p>
-  </footer>
+  <footer>© 2025 Bubbles Marketing</footer>
 </body>
 </html>
